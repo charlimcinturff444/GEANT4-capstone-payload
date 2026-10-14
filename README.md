@@ -20,15 +20,9 @@ C:\Users\YOURNAME\Downloads\base_model\
 
 ---
 
-## Part 1: Quick win, run the Python model on Windows
 
-1. Install Python from [python.org/downloads](https://www.python.org/downloads). On the first installer screen, tick **Add python.exe to PATH** before clicking **Install Now**.
-2. Open the `base_model` folder in File Explorer. Click the address bar at the top, type `cmd`, and press Enter. A black Command Prompt window opens in that folder.
-3. Install the packages (skip this step if you already have them):
+ Open the `base_model` folder in File Explorer. Click the address bar at the top, type `cmd`, and press Enter. A black Command Prompt window opens in that folder.
 
-   ```bat
-   py -m pip install numpy pandas matplotlib
-   ```
 
 4. Run the model:
 
