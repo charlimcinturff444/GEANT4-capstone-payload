@@ -1,0 +1,66 @@
+{
+  "_how_to_use": "Edit the numbers below, save, then run:  python cubesat_model.py config_12U.json   Everything marked PLACEHOLDER is a guess until your team has real data. Lengths are in mm. The z axis is the long axis of the satellite (the axis the circuit boards stack along).",
+  "satellite": {
+    "size_label": "6U",
+    "outer_mm": [
+      100.0,
+      226.3,
+      366.0
+    ],
+    "wall_mm": 2.0,
+    "wall_material": "Al",
+    "_note": "PLACEHOLDER: outer size, wall thickness and material. Use your real structure."
+  },
+  "solar_panels": {
+    "enabled": true,
+    "thickness_mm": 1.6,
+    "material": "Si",
+    "_note": "PLACEHOLDER: panels on all six faces. Set enabled to false to remove them."
+  },
+  "boards": {
+    "count": 5,
+    "size_mm": [
+      90,
+      90
+    ],
+    "thickness_mm": 1.6,
+    "pitch_mm": 15,
+    "start_above_floor_mm": 20,
+    "material": "FR4",
+    "_note": "PLACEHOLDER: the stack of circuit boards. One calculation point is placed 1 mm above each board."
+  },
+  "components": [
+    {
+      "name": "payload",
+      "size_mm": [
+        90,
+        90,
+        150
+      ],
+      "center_mm": "above_stack",
+      "gap_above_stack_mm": 15,
+      "wall_mm": 2.0,
+      "material": "Al",
+      "add_point": true,
+      "_note": "PLACEHOLDER: payload box. wall_mm = hollow box with that wall thickness; use null for a solid block. center_mm can be [x, y, z] instead of above_stack. Copy this block to add more boxes (batteries, radios, a sensor...)."
+    }
+  ],
+  "extra_points": [],
+  "_extra_points_example": "[{\"name\": \"my_sensitive_chip\", \"xyz_mm\": [10, 0, -50]}]",
+  "mission": {
+    "orbit_label": "UNKNOWN - ask professor/UAH",
+    "duration_years": 1.0,
+    "part_tolerance_krad": 10.0,
+    "design_margin": 2.0,
+    "_note": "part_tolerance_krad: dose your electronics can survive (about 10 for ordinary commercial parts; check datasheets). design_margin: safety factor, 2 is a common choice."
+  },
+  "dose_curve": {
+    "csv": null,
+    "curve_covers_years": 1.0,
+    "_note": "Leave csv as null to get shielding results only. When you have a SPENVIS dose-depth curve, put its file name here, e.g. \"my_orbit_curve.csv\" (two columns: thickness in mm of aluminum, dose in krad). curve_covers_years = how many years of exposure that curve represents."
+  },
+  "sky_grid": {
+    "n_cos": 30,
+    "n_phi": 60
+  }
+}
