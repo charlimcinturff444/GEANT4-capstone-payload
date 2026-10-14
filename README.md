@@ -2,35 +2,6 @@
 
 **Windows guide: running the CubeSat shielding model with Geant4**
 
-Step-by-step instructions for Windows 10 or 11.
-
-Two programs answer the same question: *how much material shields each spot inside the satellite?*
-
-| Program | What it is | Time | Output |
-|---|---|---|---|
-| **Python model** (`cubesat_model.py`) | Runs directly on Windows | ~15 minutes | Colored sky maps and a results table |
-| **Geant4 program** (`shield.cc`) | Geant4 does not run natively on Windows, so it runs inside Ubuntu Linux living inside Windows (called **WSL**) | ~1 hour, mostly waiting for downloads | `rays.csv` (numbers) |
-
-> **Tip:** You can stop after Part 1 if you only need something to show for DAC 1. Parts 2 to 6 get you the real Geant4 version.
-
-## Contents
-
-- [Part 0: Before you start](#part-0-before-you-start)
-- [Part 1: Quick win, run the Python model on Windows](#part-1-quick-win-run-the-python-model-on-windows)
-- [Part 2: Install WSL (Ubuntu inside Windows)](#part-2-install-wsl-ubuntu-inside-windows)
-- [Part 3: Set up Geant4 inside Ubuntu](#part-3-set-up-geant4-inside-ubuntu)
-- [Part 4: Copy your project into Ubuntu](#part-4-copy-your-project-into-ubuntu)
-- [Part 5: Build the Geant4 program](#part-5-build-the-geant4-program)
-- [Part 6: Run it and check it](#part-6-run-it-and-check-it)
-- [Part 7: See pictures and open files from Windows](#part-7-see-pictures-and-open-files-from-windows)
-- [Part 8: Put in your own numbers](#part-8-put-in-your-own-numbers)
-- [Part 9: Every-time routine](#part-9-every-time-routine)
-- [Part 10: Troubleshooting](#part-10-troubleshooting)
-- [Part 11: What this does and does not tell you](#part-11-what-this-does-and-does-not-tell-you)
-
----
-
-## Part 0: Before you start
 
 Download the files and place them like this:
 
